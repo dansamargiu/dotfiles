@@ -11,6 +11,9 @@ let mapleader = ","
 let g:mapleader = ","
 " Set vimrc to source itself on save
 autocmd! bufwritepost .vimrc source ~/.vimrc
+" Set swapfile dir to tmp
+set swapfile
+set dir=~/tmp
 " ============================================================================
 " Visual
 " ============================================================================
@@ -31,6 +34,9 @@ set expandtab
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-fugitive'
+map <C-n> :NERDTreeToggle<CR>
 call vundle#end()
 " ============================================================================
 " Keep this section at the bottom of vimrc
